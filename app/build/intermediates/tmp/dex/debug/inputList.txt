@@ -1,0 +1,5 @@
+G:\C_All\ContactsApi\app\build\intermediates\classes\debug
+G:\C_All\ContactsApi\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.0-97aed980f2349804e565e7e84f14266bb8616038.jar
+G:\C_All\ContactsApi\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-d296c0b7029aad55e808d984edb05f8a2c95e8a3.jar
+G:\C_All\ContactsApi\app\build\intermediates\pre-dexed\debug\classes-fc41fec1220dbf4785c39ffc187846933385ca66.jar
+G:\C_All\ContactsApi\app\build\intermediates\pre-dexed\debug\classes-00fa0c85f36b2d6949f704d7dc171a39a77ec00f.jar

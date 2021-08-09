@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Read_Contacts"
+                android:id="@+id/btn"/>
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Read_SMS"
+                android:id="@+id/btnsms"/>
+        <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mylistview"/>
+
+</LinearLayout>
+
+<!-- From: file:/G:/C_All/ContactsApi/app/src/main/res/layout/activity_main.xml -->

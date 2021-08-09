@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="G:\C_All\ContactsApi\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\classes.jar"
+        jumboMode="false"
+        revision="27.0.3"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="G:\C_All\ContactsApi\app\build\intermediates\pre-dexed\debug\classes-00fa0c85f36b2d6949f704d7dc171a39a77ec00f.jar" />
+    </item>
+    <item
+        jar="G:\C_All\ContactsApi\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="27.0.3"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="G:\C_All\ContactsApi\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-d296c0b7029aad55e808d984edb05f8a2c95e8a3.jar" />
+    </item>
+    <item
+        jar="G:\Installed Programs\Ext.SDK\PlatformSDKs\android-sdk-windows\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jumboMode="false"
+        revision="27.0.3"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="G:\C_All\ContactsApi\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.0-97aed980f2349804e565e7e84f14266bb8616038.jar" />
+    </item>
+    <item
+        jar="G:\C_All\ContactsApi\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\classes.jar"
+        jumboMode="false"
+        revision="27.0.3"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="G:\C_All\ContactsApi\app\build\intermediates\pre-dexed\debug\classes-fc41fec1220dbf4785c39ffc187846933385ca66.jar" />
+    </item>
+
+</items>

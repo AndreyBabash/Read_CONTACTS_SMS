@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/sms_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff2e37e5"
+                android:text=""
+                android:textSize="20sp">
+        </TextView>
+        <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffe518b9"
+                android:text=""
+                android:textSize="20sp">
+        </TextView>
+        <TextView
+                android:id="@+id/body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff10e516"
+                android:text=""
+                android:textSize="20sp">
+        </TextView>
+        <TextView
+                android:id="@+id/read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff0f00e5"
+                android:text=""
+                android:textSize="20sp">
+        </TextView>
+        <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffe5de0d"
+                android:text=""
+                android:textSize="20sp">
+        </TextView>
+        <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffe50e0d"
+                android:text=""
+                android:textSize="20sp">
+        </TextView>
+
+</LinearLayout>
