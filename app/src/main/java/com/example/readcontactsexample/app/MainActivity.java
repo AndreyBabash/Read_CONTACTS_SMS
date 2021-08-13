@@ -8,6 +8,8 @@ import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.provider.ContactsContract;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -15,13 +17,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.*;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
-        public List<Contact> contactlist = new LinkedList<Contact>();
+        public ArrayList<Contact> contactlist = new ArrayList<Contact>();
         public List<Sms> mysmslist = new ArrayList<Sms>();
         MyAdapter adapter;
         ContactsAdapter cadapter;
@@ -31,6 +34,25 @@ public class MainActivity extends AppCompatActivity {
         private final int PERMISSIONS_REQUEST_СALL_PHONE = 12;
         Button mybtn,mybtnsms;
         ListView lv;
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if(contactlist!=null) {
+            outState.putParcelableArrayList("MyList", contactlist);
+        }
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Toast.makeText(getApplicationContext(),"Restore state!)))", Toast.LENGTH_LONG).show();
+        ArrayList<Contact> myarraylist;
+        myarraylist=savedInstanceState.getParcelableArrayList("MyList");
+        contactlist=myarraylist;
+        cadapter=new ContactsAdapter(getApplicationContext(),myarraylist);
+        lv.setAdapter(cadapter);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -253,11 +275,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Класс информации о контакте
-    public class Contact
-    {
+    public class Contact implements Parcelable {
         private String id;
         private String name  = "";
         private String phone = "";
+
+        public Contact() {
+
+        }
 
         public String getName() {
             return name;
@@ -279,6 +304,39 @@ public class MainActivity extends AppCompatActivity {
         public void setId(String id) {
             this.id = id;
         }
+
+        public Contact(Parcel parcel)
+        {
+            id=parcel.readString();
+            name=parcel.readString();
+            phone=parcel.readString();
+        }
+
+        // Методы Parcelable
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+        // Методы Parcelable
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeString(id);
+            dest.writeString(name);
+            dest.writeString(phone);
+
+        }
+        // Константа CREATOR
+        public final Parcelable.Creator<Contact> CREATOR = new Creator<Contact>() {
+            @Override
+            public Contact createFromParcel(Parcel source) {
+                return new Contact(source);
+            }
+
+            @Override
+            public Contact[] newArray(int size) {
+                return new Contact[size];
+            }
+        };
     }
 
     // Обработка результата запроса разрешения у Андроид
